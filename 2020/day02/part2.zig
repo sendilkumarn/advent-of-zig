@@ -15,6 +15,7 @@ pub fn main() void {
         const charWithSeparator = words.next().?;
         const char = (tokenize(charWithSeparator, ":")).next().?[0];
         const value = words.next().?;
+        // Note: used a bunch of if-else here and then refactored to this version
         const out: Vector(2, bool) = [_]bool{ (value[min] == char), (value[max] == char) };
 
         if (@reduce(.Xor, out)) {
