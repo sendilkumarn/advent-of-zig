@@ -95,10 +95,6 @@ pub fn main() void {
                         b = true;
                     }
 
-                    std.debug.print("tag: {}\t", .{tag});
-                    std.debug.print("value: {}\t", .{value});
-                    std.debug.print("b: {}\n", .{b});
-
                     if (b) {
                         count += 1;
                     }
